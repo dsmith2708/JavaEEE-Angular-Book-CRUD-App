@@ -1,0 +1,7 @@
+API JAVAEE
+--Project Setup (Git Repo, pom.xml, persistence.xml, application-ds.xml, beans.xml)
+--Domain Objects (Book, Author, OneToMany relationship)
+--Persistence layer (Repository)
+--Business Layer (BookService)
+--InterOperability Layer (HTML Endpoints)
+--Testing (Mockito)
