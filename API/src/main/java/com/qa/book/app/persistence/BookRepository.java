@@ -7,4 +7,6 @@ public interface BookRepository {
 	String createBook(String bookJson);
 	
 	String deleteBook(long bookID);
+
+	String addExampleData();
 }

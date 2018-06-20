@@ -36,4 +36,9 @@ public class BookServiceImpl implements BookService {
 		this.repo = repo;
 	}
 
+	@Override
+	public String addExampleData() {
+		return repo.addExampleData();
+	}
+
 }

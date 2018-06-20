@@ -26,7 +26,7 @@ public class Book {
 	private String genre;
 
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-	private Set<Author> transactions = new HashSet<>();
+	private Set<Author> authors = new HashSet<>();
 	
 	public Book () {
 		
@@ -62,12 +62,12 @@ public class Book {
 		this.genre = genre;
 	}
 
-	public Set<Author> getTransactions() {
-		return transactions;
+	public Set<Author> getAuthors() {
+		return authors;
 	}
 
-	public void setTransactions(Set<Author> transactions) {
-		this.transactions = transactions;
+	public void setAuthors(Set<Author> authors) {
+		this.authors = authors;
 	}
 
 	public Long getId() {

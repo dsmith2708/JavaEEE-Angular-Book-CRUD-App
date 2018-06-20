@@ -45,7 +45,15 @@ public class BookEndPoint {
 		return service.deleteBook(id);
 
 	}
-
+	
+	@Path("/addExampleData")
+	@GET
+	@Produces({ "application/json" })
+	public String addExampleData() {
+		
+		return service.addExampleData();
+	}
+	
 	public void setService(BookService service) {
 		LOGGER.info("BookEndPoint + setService");
 		this.service = service;

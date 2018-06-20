@@ -7,5 +7,7 @@ public interface BookService {
 	String addBook(String bookJson);
 
 	String deleteBook(Long bookID);
+	
+	String addExampleData();
 
 }
