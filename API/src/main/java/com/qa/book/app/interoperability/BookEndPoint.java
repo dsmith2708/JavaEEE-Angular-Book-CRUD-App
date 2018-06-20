@@ -50,7 +50,6 @@ public class BookEndPoint {
 	@GET
 	@Produces({ "application/json" })
 	public String addExampleData() {
-		
 		return service.addExampleData();
 	}
 	
