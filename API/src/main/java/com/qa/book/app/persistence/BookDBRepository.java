@@ -88,6 +88,26 @@ public class BookDBRepository implements BookRepository {
 		authors.add(new Author("Mr", "Daniel", "Smith"));
 		newBook.setAuthors(authors);
 		manager.persist(newBook);
+		
+		Book newBookTwo = new Book();
+		newBookTwo.setTitle("SuperMan");
+		newBookTwo.setGenre("Comic");
+		newBookTwo.setReleaseYear("1960");
+		HashSet<Author> authorsTwo = new HashSet<Author>();
+		authorsTwo.add(new Author("Mr", "Jack", "Jones"));
+		authorsTwo.add(new Author("Mr", "David", "Summer"));
+		newBookTwo.setAuthors(authorsTwo);
+		manager.persist(newBookTwo);
+		
+		Book newBookThree = new Book();
+		newBookThree.setTitle("A Song of Ice and Fire");
+		newBookThree.setGenre("Fantasy");
+		newBookThree.setReleaseYear("2004");
+		HashSet<Author> authorsThree = new HashSet<Author>();
+		authorsThree.add(new Author("Sir", "Sam", "Hunnable"));
+		newBookThree.setAuthors(authorsThree);
+		manager.persist(newBookThree);
+		
 		return "{\"message\": \"data has been successfully added\"}";
 	}
 
