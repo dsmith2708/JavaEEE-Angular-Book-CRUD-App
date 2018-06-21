@@ -1,0 +1,20 @@
+<div class="panel panel-default" ng-app="bookApp" ng-controller="bookAddController as bookAddCtrl">
+	    <div class="panel-heading">Books page</div>
+	    <div class="panel-body">
+   		{{bookAddCtrl.test}}
+   		<div>
+        	<h3><span>Add Book</span></h3>
+      </div>
+			<div>
+				<form enctype="application/json">
+					Title: <input type="text" ng-model="bookAddCtrl.formData.newBookTitle" name="title" /> <br />
+					Genre: <input type="text" ng-model="bookAddCtrl.formData.newBookGenre" name="genre" /> <br />
+					Release Year: <input type="text" ng-model="bookAddCtrl.formData.newBookReleaseYear" name="releaseYear" /> <br />
+					Author Title: <input type="text" ng-model="bookAddCtrl.formData.newBookAuthorTitle" name="authorTitle" />
+					Author First Name: <input type="text" ng-model="bookAddCtrl.formData.newBookAuthorFirstName" name="authorFirstName" />
+					Author Last Name: <input type="text" ng-model="bookAddCtrl.formData.newBookAuthorLastName" name="authorLastName" /> <br />
+					<input type="submit" value="Add Record" ng-click="bookAddCtrl.showJsonFormResult()" />
+				</form>
+			</div>
+	</div>
+</div>
