@@ -17,6 +17,10 @@
         this.deleteBook = function(bookToDelete) {
           return bookDal.deleteBook(bookToDelete);
         }
+
+        this.updateBook = function(bookToUpdate) {
+          return bookDal.updateBook(bookToUpdate);
+        }
     }
 
     angular.module("bookApp").service("bookService", ['bookDal', BookService]);

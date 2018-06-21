@@ -12,6 +12,7 @@
         			<th>{{'Genre' | uppercase}}</th>
               <th>{{'Author/s' | uppercase}}</th>
 							<th>{{'Delete' | uppercase}}</th>
+							<th>{{'Update' | uppercase}}</th>
         		</tr>
         		<tr ng-repeat="book in bookCtrl.books | filter:bookCtrl.searchTxt">
         			<td>{{book.title}}</td>
@@ -26,9 +27,24 @@
                 </ul>
 							</td>
 							<td><button value="Delete" ng-click="bookCtrl.deleteBook(book)">Delete</button></td>
+							<td><button value="Update" ng-click="bookCtrl.updateBook(book)">Update</button></td>
         		</tr>
         	</table>
         </div>
-        <button class="btn"ng-click="bookCtrl.hideTable()">Hide Books</button>
+				<button class="btn"ng-click="bookCtrl.hideTable()">Hide Books</button>
+				<br /><br />
+				<div ng-show="bookCtrl.showUpdate">
+					<form>
+						<input type="hidden" ng-model="bookCtrl.bookToUpdate.id" />
+						<input type="text" ng-model="bookCtrl.bookToUpdate.title" /> <br /><br />
+						<input type="text" ng-model="bookCtrl.bookToUpdate.releaseYear" /> <br /><br />
+						<input type="text" ng-model="bookCtrl.bookToUpdate.genre" /> <br /><br />
+						<input type="text" ng-model="bookCtrl.bookToUpdate.authorTitle" /> <br /><br />
+						<input type="text" ng-model="bookCtrl.bookToUpdate.authorFirstName" /> <br /><br />
+						<input type="text" ng-model="bookCtrl.bookToUpdate.authorLastName" /> <br /><br />
+						<input type="submit" value="Save Changes" ng-click="bookCtrl.saveUpdate()" />
+					</form>
+				</div>
+
 	</div>
 </div>
