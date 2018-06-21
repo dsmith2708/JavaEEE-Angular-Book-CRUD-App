@@ -45,14 +45,15 @@
                             "genre" : vm.bookToUpdate.genre,
                             "authors" : [
                               {
-                                "id" : vm.bookToUpdate.authorID,
+                                //"id" : vm.bookToUpdate.authorID,
                                 "authorTitle" : vm.bookToUpdate.authorTitle,
                                 "authorFirstName" : vm.bookToUpdate.authorFirstName,
                                 "authorLastName" : vm.bookToUpdate.authorLastName
                               }
                             ]
                           };
-          console.log(jsonResult);
+          console.log(bookService.updateBook(jsonResult));
+          location.reload();
         };
 
         function init() {

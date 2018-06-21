@@ -59,6 +59,17 @@ public class BookDBRepository implements BookRepository {
 		}
 	}
 	
+	@Transactional(REQUIRED)
+	public String updateBook(String bookJson) {
+		Book bookFromJson = jsonUtil.getObjectForJSON(bookJson, Book.class);
+		Book bookFromDB = manager.find(Book.class, bookFromJson.getId());
+		bookFromDB.setTitle(bookFromJson.getTitle());
+		bookFromDB.setGenre(bookFromJson.getGenre());
+		bookFromDB.setReleaseYear(bookFromJson.getReleaseYear());
+		bookFromDB.setAuthors(bookFromJson.getAuthors());
+		return "{\"message\": \"book successfully updated\"}";
+	}
+	
 	public void setManager(EntityManager manager) {
 		this.manager = manager;
 	}

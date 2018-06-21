@@ -2,7 +2,9 @@ package com.qa.book.app.business;
 
 public interface BookService {
 
-	String getAllAccounts();
+	String getAllBooks();
+	
+	String updateBook(String bookJson);
 
 	String addBook(String bookJson);
 

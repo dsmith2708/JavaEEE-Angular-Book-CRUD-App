@@ -15,7 +15,7 @@ public class BookServiceImpl implements BookService {
 	BookRepository repo;
 	
 	@Override
-	public String getAllAccounts() {
+	public String getAllBooks() {
 		LOGGER.info("In BookServiceImpl getAllAccounts ");
 		return repo.getAllBooks();
 	}
@@ -39,6 +39,12 @@ public class BookServiceImpl implements BookService {
 	@Override
 	public String addExampleData() {
 		return repo.addExampleData();
+	}
+
+	@Override
+	public String updateBook(String bookJson) {
+		LOGGER.info("In BookServiceImpl updateBook ");
+		return repo.updateBook(bookJson);
 	}
 
 }

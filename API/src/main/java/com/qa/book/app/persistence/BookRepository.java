@@ -4,6 +4,8 @@ public interface BookRepository {
 	
 	String getAllBooks();
 	
+	String updateBook(String bookJson);
+	
 	String createBook(String bookJson);
 	
 	String deleteBook(long bookID);

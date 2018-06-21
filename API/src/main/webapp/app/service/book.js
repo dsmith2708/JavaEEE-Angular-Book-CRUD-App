@@ -19,6 +19,7 @@
         }
 
         this.updateBook = function(bookToUpdate) {
+          console.log("in bookservice updatebook");
           return bookDal.updateBook(bookToUpdate);
         }
     }
