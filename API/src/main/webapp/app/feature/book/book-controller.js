@@ -13,6 +13,11 @@
         	vm.isHidden = !vm.isHidden
         };
 
+        vm.deleteBook = function(bookToDelete) {
+          bookService.deleteBook(bookToDelete);
+          location.reload();
+        }
+
         function init() {
         	bookService.getBooks().then(function (results) {
            	vm.books = results;
