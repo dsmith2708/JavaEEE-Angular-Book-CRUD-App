@@ -13,6 +13,7 @@
         };
 
         this.updateBook = function (bookToUpdate) {
+          console.log("in bookdal updateBook");
             return dal.http.PUT("rest/book/json/", bookToUpdate);
         };
 
